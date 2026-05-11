@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+matplotlib
+plotly
+scikit-learn
+torch
+lightning
+pytorch-forecasting
+optuna
+tensorboard
+statsmodels
+reportlab
