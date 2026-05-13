@@ -453,44 +453,44 @@ elif st.session_state.page == "methods":
     st.subheader("Methods")
     st.title("Malaria Outbreak Forecasting & Risk Assessment System")
 
-st.write("""
-Malaria outbreaks remain a significant public health challenge, particularly in regions with recurring seasonal transmission patterns. Early identification of potential outbreak conditions is essential for timely intervention, resource planning, and effective disease control.
+    st.write("""
+    Malaria outbreaks remain a significant public health challenge, particularly in regions with recurring seasonal transmission patterns. Early identification of potential outbreak conditions is essential for timely intervention, resource planning, and effective disease control.
 
-This system is designed to forecast future malaria incidence and evaluate outbreak risk using deep learning–based time series forecasting and statistical risk analysis. By leveraging historical epidemiological data, the system generates multi-horizon forecasts and identifies emerging high-risk conditions through adaptive risk classification techniques.
+    This system is designed to forecast future malaria incidence and evaluate outbreak risk using deep learning–based time series forecasting and statistical risk analysis. By leveraging historical epidemiological data, the system generates multi-horizon forecasts and identifies emerging high-risk conditions through adaptive risk classification techniques.
 
-The forecasting framework utilizes N-BEATS models to predict malaria trends over short-term and long-term horizons, enabling proactive public health monitoring and data-driven decision-making.
-""")
+    The forecasting framework utilizes N-BEATS models to predict malaria trends over short-term and long-term horizons, enabling proactive public health monitoring and data-driven decision-making.
+    """)
 
 # ---------------- Risk Assessment ----------------
-st.header("Risk Assessment")
+    st.header("Risk Assessment")
 
-st.write("""
-In addition to forecasting future malaria cases, the system includes a dynamic risk assessment mechanism to evaluate the potential severity of predicted outbreak conditions. The risk prediction framework analyzes forecasted malaria incidence and categorizes regions into different risk levels based on historical disease patterns.
+    st.write("""
+    In addition to forecasting future malaria cases, the system includes a dynamic risk assessment mechanism to evaluate the potential severity of predicted outbreak conditions. The risk prediction framework analyzes forecasted malaria incidence and categorizes regions into different risk levels based on historical disease patterns.
 
-Risk classification is performed using a percentile-based statistical approach derived from historical malaria case distributions. This adaptive methodology enables the system to account for regional variations in transmission patterns and disease prevalence, ensuring more reliable and context-aware risk evaluation.
-""")
+    Risk classification is performed using a percentile-based statistical approach derived from historical malaria case distributions. This adaptive methodology enables the system to account for regional variations in transmission patterns and disease prevalence, ensuring more reliable and context-aware risk evaluation.
+    """)
 
 # ---------------- Risk Levels ----------------
-st.subheader("Risk Classification Levels")
+    st.subheader("Risk Classification Levels")
 
-st.markdown("""
-- 🟢 **Low Risk**
-- 🟠 **Moderate Risk**
-- 🔴 **High Risk**
-""")
+    st.markdown("""
+    - 🟢 **Low Risk**
+    - 🟠 **Moderate Risk**
+    - 🔴 **High Risk**
+    """)
 
 # ---------------- Thresholds ----------------
-st.subheader("Classification Thresholds")
+    st.subheader("Classification Thresholds")
 
-st.markdown("""
-- Predicted case values below the **33rd percentile** are classified as **Low Risk**
-- Predicted case values between the **33rd and 66th percentiles** are classified as **Moderate Risk**
-- Predicted case values above the **66th percentile** are classified as **High Risk**
-""")
+    st.markdown("""
+    - Predicted case values below the **33rd percentile** are classified as **Low Risk**
+    - Predicted case values between the **33rd and 66th percentiles** are classified as **Moderate Risk**
+    - Predicted case values above the **66th percentile** are classified as **High Risk**
+    """)
 
-st.write("""
-By utilizing adaptive statistical thresholds instead of fixed predefined limits, the framework provides a more flexible and region-specific approach to malaria outbreak assessment, improving the effectiveness of early warning and public health monitoring.
-""")
+    st.write("""
+    By utilizing adaptive statistical thresholds instead of fixed predefined limits, the framework provides a more flexible and region-specific approach to malaria outbreak assessment, improving the effectiveness of early warning and public health monitoring.
+    """)
 
 elif st.session_state.page == "contact":
     st.subheader("Contact Us")
