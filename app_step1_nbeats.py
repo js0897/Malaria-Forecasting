@@ -890,6 +890,7 @@ elif st.session_state.page == "forecast":
                 risk_level = "High"
                 risk_color = "#E74C3C"
 
+
             st.markdown("### GeoAI Spatial Risk Panel")
 
             # ================= LOAD GEOJSON =================
@@ -899,36 +900,40 @@ elif st.session_state.page == "forecast":
             # ================= DATA =================
             map_df = pd.DataFrame({
                 "State": [selected_state],
-                "Average Forecasted Cases": [cases_value]
+                "Average Forecasted Cases": [cases_value],
+                "Risk Level": [risk_level]
             })
 
-            # ================= CHOROPLETH MAP =================
+# ================= CHOROPLETH MAP =================
             fig_map = px.choropleth_mapbox(
                 map_df,
                 geojson=india_geojson,
                 locations="State",
                 featureidkey="properties.NAME_1",
-                color="Average Forecasted Cases",
 
-                color_continuous_scale=[
-                    [0, "#2ECC71"],     # Low Risk
-                    [0.5, "#F39C12"],   # Medium Risk
-                    [1, "#E74C3C"]      # High Risk
-                ],
+                # 🔥 Use categorical risk instead of numeric cases
+                color="Risk Level",
 
-                mapbox_style="carto-positron",  # Clean light theme
+                # 🎯 Fixed risk colors
+                color_discrete_map={
+                    "Low": "#2ECC71",
+                    "Moderate": "#F39C12",
+                    "High": "#E74C3C"
+                },
+
+                mapbox_style="carto-positron",
                 zoom=5,
                 center={"lat": 22.5, "lon": 80},
                 opacity=0.85
             )
 
-            # ================= OPTIONAL HIGH RISK MARKER =================
+            # ================= HIGH RISK VISUAL MARKER =================
             if risk_level == "High":
                 fig_map.add_trace(
                     go.Scattermapbox(
-                        lat=[26.5],
-                        lon=[92.5],
-                        model="markers",
+                        lat=[26.5],   # adjust if needed
+                        lon=[92.5],   # adjust if needed
+                        mode="markers",
                         marker=dict(
                             size=30,
                             color="rgba(231,76,60,0.35)"
@@ -938,33 +943,13 @@ elif st.session_state.page == "forecast":
                     )
                 )
 
-            # ================= LAYOUT CLEANUP =================
+            # ================= FINAL LAYOUT =================
             fig_map.update_layout(
-
                 margin=dict(l=0, r=0, t=40, b=0),
                 height=600,
+                coloraxis_showscale=False   # hides numeric colorbar (clean look)
+            )
 
-                coloraxis_colorbar=dict(
-                    title="Average Forecasted Cases",
-                    thickness=18
-                )
-            )
-            # ================= ADD INDIA + STATE BORDER OUTLINES =================
-            fig_map.update_layout(
-                mapbox={
-                    "layers": [
-                        {
-                            "source": india_geojson,
-                            "sourcetype": "geojson",
-                            "type": "line",
-                            "color": "black",
-                            "line": {
-                                "width": 1.2
-                            }
-                        }
-                    ]
-                }
-            )
             # ================= DISPLAY MAP =================
             st.plotly_chart(fig_map, use_container_width=True)
 # ======================================================
