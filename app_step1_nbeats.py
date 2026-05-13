@@ -432,25 +432,27 @@ if st.session_state.page == "home":
 # ======================================================
 if st.session_state.page == "home":
     st.subheader("Overview")
+   
     st.markdown("""
     The primary objective of this platform is to develop an AI-driven early warning system for forecasting malaria outbreaks and detecting potential high-risk situations in advance. By combining advanced deep learning forecasting models with intelligent risk assessment techniques, the system enables accurate prediction of future malaria trends and supports proactive public health decision-making. The platform is designed to assist healthcare authorities and researchers in improving outbreak preparedness, optimizing resource allocation, and implementing timely preventive measures through data-driven insights.
     """)
 
 elif st.session_state.page == "about":
     st.subheader("About Us")
+   
     st.write(
         "Indian Institute of Chemical Technology (IICT), Hyderabad, established in 1944, is a constituent laboratory of the Council of Scientific and Industrial Research (CSIR), New Delhi. With its expertise in chemistry and chemical technology, it provides solutions to challenges faced by Industry, Government Departments and Entrepreneurs through basic and applied research, and process development. The institute is internationally recognized for its contributions to chemistry research and is an ideal place for taking ideas to commercialization through state-of-the-art research and development. CSIR-IICT during its seventy-year journey has made its mark as a dynamic, innovative and result-oriented R&D organization. The clientele spans all comers of the globe. In India, it is CSIR-Indian Institute of Chemical Technology (CSIR-IICT) is one of the oldest National Laboratories the reliable destination of chemical and biotech industries. The reputation that CSIR-IICT could establish amongst the industrial clients as a reliable R&D partner, can be largely attributed to its rich pool of scientists with expertise in broad-ranging research areas and simple and effective business development strategies."
     )
 
 elif st.session_state.page == "data":
     st.subheader("About the Data")
+    
     st.write(
         "Malaria remains a major public health challenge in the North-Eastern states of India, which contribute a disproportionately high share of the country’s Plasmodium falciparum burden and represent some of the most persistent transmission zones nationally. The region accounts for about 15% of India’s malaria cases and roughly 12% of the national P. falciparum cases, the most severe form of malaria infection.Transmission in this region is sustained by efficient vector species such as Anopheles minimus and Anopheles baimaii, along with favorable ecological conditions including forested terrain, high humidity, and perennial hill streams that support continuous mosquito breeding. In addition, the North-East serves as a critical epidemiological corridor linking India with Southeast Asia, facilitating the historical introduction of antimalarial drug-resistant parasite strains into the country. Many malaria-affected areas in the region are located in tribal and difficult-to-access locations, which further complicates surveillance and control efforts.In this context, early warning systems based on deep learning–driven forecasting can play an important role by identifying temporal patterns in malaria transmission and supporting evidence-based decision-making for targeted intervention planning. Such predictive approaches align with India’s national malaria elimination strategy (2016–2030) by strengthening preparedness and improving resource prioritization in high-risk transmission settings."
         
     )
 
 elif st.session_state.page == "methods":
-    st.subheader("Methods")
     st.title("Malaria Outbreak Forecasting & Risk Assessment System")
 
     st.write("""
@@ -494,6 +496,7 @@ elif st.session_state.page == "methods":
 
 elif st.session_state.page == "contact":
     st.subheader("Contact Us")
+   
     st.write("""
     **CSIR – Indian Institute of Chemical Technology (IICT)**  
     **Academy of Scientific and Innovative Research (AcSIR)**  
