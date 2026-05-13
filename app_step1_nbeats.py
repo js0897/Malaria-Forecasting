@@ -433,9 +433,7 @@ if st.session_state.page == "home":
 if st.session_state.page == "home":
     st.subheader("Overview")
     st.markdown("""
-    Malaria remains a major public health challenge in the North-Eastern states of India.
-    This system provides early warning through deep learning–based forecasting to support
-    proactive disease control and elimination strategies.
+    The primary objective of this platform is to develop an AI-driven early warning system for forecasting malaria outbreaks and detecting potential high-risk situations in advance. By combining advanced deep learning forecasting models with intelligent risk assessment techniques, the system enables accurate prediction of future malaria trends and supports proactive public health decision-making. The platform is designed to assist healthcare authorities and researchers in improving outbreak preparedness, optimizing resource allocation, and implementing timely preventive measures through data-driven insights.
     """)
 
 elif st.session_state.page == "about":
