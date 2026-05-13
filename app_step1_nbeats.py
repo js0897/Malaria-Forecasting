@@ -453,7 +453,7 @@ elif st.session_state.page == "data":
     )
 
 elif st.session_state.page == "methods":
-    st.title("Malaria Outbreak Forecasting & Risk Assessment System")
+    st.subheader("Malaria Outbreak Forecasting & Risk Assessment System")
 
     st.write("""
     Malaria outbreaks remain a significant public health challenge, particularly in regions with recurring seasonal transmission patterns. Early identification of potential outbreak conditions is essential for timely intervention, resource planning, and effective disease control.
@@ -464,7 +464,7 @@ elif st.session_state.page == "methods":
     """)
 
 # ---------------- Risk Assessment ----------------
-    st.header("Risk Assessment")
+    st.subheader("Risk Assessment")
 
     st.write("""
     In addition to forecasting future malaria cases, the system includes a dynamic risk assessment mechanism to evaluate the potential severity of predicted outbreak conditions. The risk prediction framework analyzes forecasted malaria incidence and categorizes regions into different risk levels based on historical disease patterns.
