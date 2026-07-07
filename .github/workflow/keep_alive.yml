@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Ping App URL
         run: |
-          curl -sSf -I https://YOUR-APP-NAME.streamlit.app || echo "Ping failed, app may be asleep or URL is wrong"
+          curl -sSf -I https://malaria-forecasting-pqxshv7rb8z5jwqjrpzklq.streamlit.app/ || echo "Ping failed, app may be asleep or URL is wrong"
